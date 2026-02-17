@@ -65,4 +65,10 @@ Using SQL (MS SQL Server):
 ## Author
 Djon — Junior Data Analyst (SQL)
 
+## Final Report Result
+
+Below is the final analytical report generated using SQL:
+
+![Debt Report](report_result.PNG)
+
 
