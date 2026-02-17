@@ -1,2 +1,66 @@
 # installment-loan-sql-analysis
 SQL analysis of installment loan portfolio: payments, overdue debt and customer segmentation.
+
+# Installment Loan SQL Analysis
+
+## Project description
+This project analyzes an installment loan portfolio using SQL.
+
+The goal was to build a full analytical debt report as of 30.04.2020.
+
+The report calculates:
+- total contract amount
+- amount that should have been paid
+- actual payments
+- overdue debt
+- remaining balance
+- customer segmentation by overdue payments
+
+## Database
+The database contains two main tables:
+
+**installment_plan**
+- contract_number
+- merchant_id
+- date_purch
+- number of installments (qu_inst)
+- monthly payment (inst)
+
+**payments**
+- contract_number
+- merchant_id
+- payment date
+- payment amount
+
+## What was implemented
+Using SQL (MS SQL Server):
+
+- CTE queries
+- CASE logic
+- date calculations
+- aggregation
+- customer segmentation
+- missed payment detection by month
+
+## Main report logic
+1. Calculate how much the client SHOULD have paid by report date.
+2. Calculate how much the client ACTUALLY paid.
+3. Determine overdue debt.
+4. Detect missed payment months.
+5. Segment customers:
+   - 0 missed payments
+   - 1 missed payment
+   - 2 missed payments
+   - 3 missed payments
+   - 4+ missed payments
+
+## Files
+- `database_schema.sql` — database structure
+- `debt_report.sql` — final analytical report
+
+## Tools
+- Microsoft SQL Server
+- SSMS
+
+## Author
+Djon — Junior Data Analyst (SQL)
